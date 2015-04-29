@@ -1,0 +1,8 @@
+ { ;:production
+   :api-login ""       ;; <= 20 chars
+   :api-key "" ;; = 16 chars
+   :email-receipt false        ;; send customer receipt
+   :market-type 0              ;; 0 = ecommerce, 1 = moto, 2 = retail/card present
+   :test-mode true             ;; test flag, allowed in both production & test endpoints
+   :processing-endpoint :test
+   :default-description "Online Purchase"}

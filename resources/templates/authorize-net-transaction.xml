@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name>API_LOGIN_ID</name>
+    <transactionKey>API_TRANSACTION_KEY</transactionKey>
+  </merchantAuthentication>
+  <refId>123456</refId>
+  <transactionRequest>
+    <transactionType>authCaptureTransaction</transactionType>
+    <amount>5</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>5424000000000015</cardNumber>
+        <expirationDate>1220</expirationDate>
+        <cardCode>999</cardCode>
+      </creditCard>
+      <trackData>
+        <track1></track1>
+        <track2></track2>
+      </trackData>
+    </payment>
+    <order>
+     <invoiceNumber>INV-12345</invoiceNumber>
+     <description>Product Description</description>
+    </order>
+    <lineItems>
+      <lineItem>
+        <itemId>1</itemId>
+        <name>vase</name>
+        <description>Cannes logo </description>
+        <quantity>10</quantity>
+        <unitPrice>45.00</unitPrice>
+      </lineItem>
+      <lineItem>
+        <itemId>2</itemId>
+        <name>pot</name>
+        <description>Holywood logo </description>
+        <quantity>8</quantity>
+        <unitPrice>45.00</unitPrice>
+      </lineItem>
+    </lineItems>
+    <tax>
+      <amount>4.26</amount>
+      <name>level2 tax name</name>
+      <description>level2 tax</description>
+    </tax>
+    <duty>
+      <amount>8.55</amount>
+      <name>duty name</name>
+      <description>duty description</description>
+    </duty>
+    <shipping>
+      <amount>4.26</amount>
+      <name>level2 tax name</name>
+      <description>level2 tax</description>
+    </shipping>
+    <poNumber>456654</poNumber>
+    <customer>
+      <id>99999456654</id>
+    </customer>
+    <billTo>
+      <firstName>Ellen</firstName>
+      <lastName>Johnson</lastName>
+      <company>Souveniropolis</company>
+      <address>14 Main Street</address>
+      <city>Pecan Springs</city>
+      <state>TX</state>
+      <zip>44628</zip>
+      <country>USA</country>
+    </billTo>
+    <shipTo>
+      <firstName>China</firstName>
+      <lastName>Bayles</lastName>
+      <company>Thyme for Tea</company>
+      <address>12 Main Street</address>
+      <city>Pecan Springs</city>
+      <state>TX</state>
+      <zip>44628</zip>
+      <country>USA</country>
+    </shipTo>
+    <customerIP>192.168.1.1</customerIP>
+    <!--'retail' section only for Card Present Sandbox Accounts -->
+    <retail><marketType>2</marketType><deviceType>1</deviceType></retail>
+    <transactionSettings>
+      <setting>
+        <settingName>testRequest</settingName>
+        <settingValue>false</settingValue>
+      </setting>
+    </transactionSettings>
+    <userFields>
+      <userField>
+        <name>favorite_color</name>
+        <value>blue</value>
+      </userField>
+    </userFields>
+  </transactionRequest>
+</createTransactionRequest>
